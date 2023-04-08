@@ -1,0 +1,172 @@
+.events-wrapper {
+    border-left: 4px solid #fac863;
+    margin-left: 1vw;
+    width: 25vw;
+}
+
+.events-container {
+    height: 78vh;
+    margin-left: 1.2em;
+}
+
+.events-header h3 {
+    font-weight: 400;
+    margin: 0 0 0 0;
+    font-size: xx-large;
+}
+
+.events-header h2 {
+    font-weight: 400;
+    margin: 0.2em 0 0 0;
+    font-size: 40px;
+}
+
+/* events-list */
+
+.no-event {
+    border: 1px solid rgba(223,223,223,255);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.no-event p {
+    margin-left: 1rem;
+}
+
+.event-item {
+    margin-top: 1rem;
+}
+
+.event-item {
+    border: 1px solid rgba(223,223,223,255);
+    border-radius: 5px;
+    overflow-x: auto;
+    cursor: pointer;
+}
+
+.event-item p {
+    margin-left: 1rem;
+}
+
+.events-list {
+    height: 59vh;
+    overflow-y: auto;
+}
+
+/* add-event-button */
+
+
+.add-event-button button {
+    border: none;
+    background: rgba(0,123,255,255);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-event-button button:disabled {
+    cursor: not-allowed;
+    background: grey;
+}
+
+/* title-row */
+
+.title-row h1 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 1rem;
+}
+
+.title-row {
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+
+.title-row button {
+    border: none;
+    background: white;
+    cursor: pointer;
+    color: grey;
+    font-weight: 900;
+    font-size: 20px;
+    float: right;
+}
+
+/* form-container */ 
+
+.form-container {
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+#title {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    width: 70%;
+}
+
+#date {
+    margin-bottom: 3.5rem;
+}
+
+#description {
+    width: 64%;
+    margin-bottom: 2rem;
+}
+
+
+label {
+    margin: 0.5rem 0 0 1rem;
+}
+
+/* input */
+
+input {
+    margin-left: 1rem;
+    padding: 6px;
+    border-radius: 4px;
+    border: 2px solid rgb(211, 211, 211);
+}
+
+input:focus {
+    outline: 2px solid rgba(0,123,255,255);
+}
+
+
+/* add event button */
+
+.add-event {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.add-event button {
+    border: none;
+    background: rgba(0,123,255,255);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-event button:hover {
+    opacity: 0.8;
+}
+
+.edit-button {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.edit-button button {
+    border: none;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+

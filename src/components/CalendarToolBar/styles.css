@@ -1,0 +1,36 @@
+/* calendar-tool-bar */
+
+.calendar-tool-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+    align-items: center;
+}
+
+.calendar-tool-bar button {
+    width: 2.5em;
+    height: 2.2em;
+}
+
+.calendar-tool-bar h2 {
+    font-weight: 600;
+}
+
+.tool-bar-button, .tool-bar-button--today {
+    font-size: 18px;
+    border: none;
+    border-radius: 3.5px;
+    color: white;
+    background: rgba(44,62,80,255);
+    transition: 0.1s;
+    cursor: pointer;
+    margin: 10px 20px 10px 20px;
+}
+
+.tool-bar-button--today {
+    font-size: 1rem;
+}
+
+.tool-bar-button:hover, .tool-bar-button--today:hover {
+    background: rgba(30,43,55,255);
+}

@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 0px 0px 12vw;
+    width: 100%;
+}
+
+.row h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5rem;
+}
+
+.row a {
+    text-decoration: none;
+    color: black;
+}

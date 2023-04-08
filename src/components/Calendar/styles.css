@@ -1,0 +1,27 @@
+/* calendar-wrapper */ 
+
+.calendar-wrapper {
+    margin-left: 10vw;
+    width: 50vw;
+}
+
+/* calendar-container */ 
+
+.calendar-container {
+    border-top: 4px solid #fac863;
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .calendar-wrapper {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+}
+
+

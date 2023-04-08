@@ -1,0 +1,62 @@
+/* other commands */
+
+
+
+/* calendar grid *geral* */
+
+.calendar-grid {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
+    border-color: #ddd;
+    border-right: none;
+}
+
+/* row-day-name */
+
+.grid-day-name {
+    padding: 0;
+    border-right: 1px solid #ddd;
+    font-weight: 900;
+}
+
+.row-day-name {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+/* days grid */ 
+
+
+.day-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-item {
+    height: 5rem;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.last {
+    border-right: none;
+}
+
+.grid-previously-item {
+    color: grey;
+}
+
+.day-number {
+    padding: 2px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.day-number--current {
+    color: red;
+}
+
