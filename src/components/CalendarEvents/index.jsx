@@ -21,6 +21,7 @@ export const CalendarEvents = ({
   const [eventTitle, setEventTitle] = useState('')
   const [eventDate, setEventDate] = useState('')
   const [editState, setEditState] = useState(false)
+  const [currentEvent, setCurrentEvent] = useState()
 
   return (
     <div className="events-wrapper">
@@ -39,6 +40,7 @@ export const CalendarEvents = ({
             eventDate,
             setIsOpen,
             setEditState,
+            currentEvent,
           )}
         </div>
         <EventsModal

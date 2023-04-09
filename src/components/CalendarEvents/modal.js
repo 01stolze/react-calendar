@@ -292,6 +292,7 @@ export const handleEditEvent = (
     console.log('REALMENTE EDITAR OS EVENTOS, noufa garai')
     console.log('evento a ser editado:', editEventsData)
     for (let i = 0; eventsData.length > i; i++) {
+      // fix
       if (editEventsData[0].title == eventsData[i].title) {
         if (wichEvent == 'delete') {
           console.warn('removendo title')

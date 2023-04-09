@@ -8,25 +8,24 @@ export const disabledAdd = (yearEvent, selectedDay, monthEvent) => {
     selectedDay,
     monthEvent,
   )}-${get0Number('day', selectedDay, monthEvent)}`
-  for (let i = 0; eventsData.length > i; i++) {
+
+  let disabled = false
+
+  eventsData.forEach((data) => {
     if (
-      eventsData[i].date != undefined &&
-      eventsData[i].date != '' &&
-      eventsData[i].newDate != undefined &&
-      eventsData[i].newDate != '' &&
-      eventsData[i].new3Date != undefined &&
-      eventsData[i].new3Date != '' &&
-      eventsData[i].new4Date != undefined &&
-      eventsData[i].new4Date != '' &&
-      eventsData[i].new5Date != undefined &&
-      eventsData[i].new5Date != ''
+      data.date == data.newDate &&
+      data.date == data.new3Date &&
+      data.date == data.new4Date &&
+      data.date == data.new4Date &&
+      data.date == data.new5Date
     ) {
-      if (selectedDateOrganized == eventsData[i].date) {
+      if (data.date == selectedDateOrganized) {
         console.log('block: tem 5 eventos')
-        return true
+        disabled = true
       }
     }
-  }
+  })
+  return disabled
 }
 
 /* função - controle de estados */
@@ -110,25 +109,25 @@ export const displayEvents = (
 
   console.log(eventsData)
 
-  const currentEventFun = () => {
-    console.warn('currenteventfunc')
-    for (let i = 0; eventsData.length > i; i++) {
-      console.warn('i', i)
-      if (selectedDateOrganized == eventsData[i].date) {
-        return eventsData[i]
-      } else if (selectedDateOrganized == eventsData[i].newDate) {
-        return eventsData[i]
-      } else if (selectedDateOrganized == eventsData[i].new3Date) {
-        return eventsData[i]
-      } else if (selectedDateOrganized == eventsData[i].new4Date) {
-        return eventsData[i]
-      } else if (selectedDateOrganized == eventsData[i].new5Date) {
-        return eventsData[i]
+  let currentEvent = null
+
+  const currentEventFunc = () => {
+    eventsData.forEach((data) => {
+      console.log(data.date)
+      if (
+        data.date == selectedDateOrganized ||
+        data.newDate == selectedDateOrganized ||
+        data.new3Date == selectedDateOrganized ||
+        data.new4Date == selectedDateOrganized ||
+        data.new5Date == selectedDateOrganized
+      ) {
+        console.log('é igual kk', data)
+        currentEvent = data
       }
-    }
+    })
   }
 
-  const currentEvent = currentEventFun()
+  currentEventFunc()
 
   /* retornar os eventos */
 
