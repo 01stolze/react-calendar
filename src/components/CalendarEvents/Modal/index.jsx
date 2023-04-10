@@ -69,6 +69,8 @@ export const EventsModal = ({
                 required
                 defaultValue={editEventsData[0].date}
               ></input>
+            </div>
+            <div className="form-row">
               <label>Begins:</label>
               <input
                 type="time"

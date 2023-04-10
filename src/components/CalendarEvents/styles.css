@@ -4,6 +4,8 @@
     width: 25vw;
 }
 
+
+
 .events-container {
     height: 78vh;
     margin-left: 1.2em;
@@ -116,6 +118,8 @@
 }
 
 
+
+
 label {
     margin: 0.5rem 0 0 1rem;
 }
@@ -167,6 +171,26 @@ input:focus {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* media */ 
+
+@media (max-width: 768px) {
+    .events-wrapper {
+        width: 90vw;
+        margin: 5rem 5vw 2rem 5vw;
+    }
+    #title, #date, #description {
+        margin-bottom: 1.5rem;
+    }
+    #begin-time, #end-time {
+        margin-left: 2px;
+    }
+    #description {
+        margin-top: 1.5rem;
+        width: 54%;
+    }
+}
+
 
 
 

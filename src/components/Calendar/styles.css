@@ -12,16 +12,20 @@
 }
 
 @media (max-width: 768px) {
-    .calendar-container {
-        width: 100vw;
-    }
-}
-
-@media (max-width: 1200px) {
     .calendar-wrapper {
-        margin-left: 3vw;
-        margin-right: 3vw;
+        width: 80vw;
+        margin-right: 5vw;
+        margin-left: 10vw;
+    }
+    .tool-bar-button, .tool-bar-button--today {
+        margin: 1px;
     }
 }
 
+@media (max-width: 500px) {
+    .calendar-wrapper {
+        width: 90vw;
+        margin: 0 0vw 0 5vw;
+    }
+}
 
