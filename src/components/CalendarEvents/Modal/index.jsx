@@ -1,8 +1,9 @@
 import Modal from 'react-modal'
 import './styles.css'
 import P from 'prop-types'
-import { getFormData, handleEditEvent } from '../modal'
+import { handleEditEvent } from '../funcs/handleEditEvent'
 import { editEventsData } from '../data'
+import { getFormData } from '../funcs/getFormData'
 
 Modal.setAppElement('#root')
 

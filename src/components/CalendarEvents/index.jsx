@@ -2,7 +2,8 @@ import './styles.css'
 import P from 'prop-types'
 import Modal from 'react-modal'
 import { useState } from 'react'
-import { disabledAdd, displayEvents } from './events'
+import { disabledAdd } from './funcs/disableAdd'
+import { displayEvents } from './funcs/displayEvents'
 import { EventsModal, openModal } from './Modal'
 
 Modal.setAppElement('#root')

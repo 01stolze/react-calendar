@@ -7,7 +7,7 @@ import {
   switchMonth,
 } from './displayMonth'
 import { keyGen } from '../../utils/getDate'
-import { consoleNumber } from '../CalendarEvents/events'
+import { consoleNumber } from '../CalendarEvents/funcs/consoleNumber'
 
 export const DisplayMonth = ({
   month,
