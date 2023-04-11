@@ -6,6 +6,7 @@ import { editEventsData, eventsData } from '../data'
 export const handleEditEvent = (
   wichEvent,
   setIsOpen,
+  setFeedBackM,
   currentEvent,
   setEditState,
 ) => {
@@ -72,7 +73,6 @@ export const handleEditEvent = (
     const hourEnd = document.querySelector('#end-time')
     console.log('REALMENTE EDITAR OS EVENTOS, noufa garai')
     console.log('evento a ser editado:', editEventsData)
-    // fix
 
     eventsData.forEach((data) => {
       if (editEventsData[0].title == data.title) {
@@ -157,5 +157,11 @@ export const handleEditEvent = (
         }
       }
     })
+    if (wichEvent == 'delete') {
+      console.log('leu aqui')
+      setFeedBackM('deleted')
+    } else {
+      setFeedBackM('edited')
+    }
   }
 }

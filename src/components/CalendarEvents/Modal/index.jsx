@@ -4,6 +4,7 @@ import P from 'prop-types'
 import { handleEditEvent } from '../funcs/handleEditEvent'
 import { editEventsData } from '../data'
 import { getFormData } from '../funcs/getFormData'
+import { handleRequiredForm } from '../funcs/requiredForm'
 
 Modal.setAppElement('#root')
 
@@ -27,6 +28,7 @@ export const EventsModal = ({
   setD,
   editState,
   setEditState,
+  setFeedBackM,
 }) => {
   return (
     <Modal
@@ -57,7 +59,7 @@ export const EventsModal = ({
                 placeholder="Event Title"
                 maxLength="25"
                 defaultValue={editEventsData[0].title}
-                required
+                onChange={handleRequiredForm}
               ></input>
             </div>
             <div className="form-row">
@@ -66,7 +68,7 @@ export const EventsModal = ({
               <input
                 type="date"
                 id="date"
-                required
+                onChange={handleRequiredForm}
                 defaultValue={editEventsData[0].date}
               ></input>
             </div>
@@ -106,6 +108,7 @@ export const EventsModal = ({
                       d,
                       setD,
                       setEditState,
+                      setFeedBackM,
                     )
                   }
                 >
@@ -117,7 +120,7 @@ export const EventsModal = ({
                 <button
                   type="button"
                   onClick={() => {
-                    handleEditEvent(null, setIsOpen)
+                    handleEditEvent(null, setIsOpen, setFeedBackM)
                     closeModal(setIsOpen, setEditState)
                   }}
                 >
@@ -132,7 +135,7 @@ export const EventsModal = ({
             <button
               type="button"
               onClick={() => {
-                handleEditEvent('delete', setIsOpen)
+                handleEditEvent('delete', setIsOpen, setFeedBackM)
                 closeModal(setIsOpen, setEditState)
               }}
               className="modal-footer-delete"
@@ -162,4 +165,5 @@ EventsModal.propTypes = {
   setD: P.func,
   editState: P.bool,
   setEditState: P.func,
+  setFeedBackM: P.func,
 }

@@ -11,6 +11,7 @@ export const displayEvents = (
   eventDate,
   setIsOpen,
   setEditState,
+  setFeedBackM,
 ) => {
   /* organizar eventDates */
 
@@ -59,7 +60,13 @@ export const displayEvents = (
             <div
               className="event-item"
               onClick={() =>
-                handleEditEvent('first', setIsOpen, currentEvent, setEditState)
+                handleEditEvent(
+                  'first',
+                  setIsOpen,
+                  setFeedBackM,
+                  currentEvent,
+                  setEditState,
+                )
               }
             >
               <p>
@@ -76,7 +83,13 @@ export const displayEvents = (
             <div
               className="event-item"
               onClick={() =>
-                handleEditEvent('second', setIsOpen, currentEvent, setEditState)
+                handleEditEvent(
+                  'second',
+                  setIsOpen,
+                  setFeedBackM,
+                  currentEvent,
+                  setEditState,
+                )
               }
             >
               <p>
@@ -93,7 +106,13 @@ export const displayEvents = (
             <div
               className="event-item"
               onClick={() =>
-                handleEditEvent('third', setIsOpen, currentEvent, setEditState)
+                handleEditEvent(
+                  'third',
+                  setIsOpen,
+                  setFeedBackM,
+                  currentEvent,
+                  setEditState,
+                )
               }
             >
               <p>
@@ -110,7 +129,13 @@ export const displayEvents = (
             <div
               className="event-item"
               onClick={() =>
-                handleEditEvent('four', setIsOpen, currentEvent, setEditState)
+                handleEditEvent(
+                  'four',
+                  setIsOpen,
+                  setFeedBackM,
+                  currentEvent,
+                  setEditState,
+                )
               }
             >
               <p>
@@ -127,7 +152,13 @@ export const displayEvents = (
             <div
               className="event-item"
               onClick={() =>
-                handleEditEvent('five', setIsOpen, currentEvent, setEditState)
+                handleEditEvent(
+                  'five',
+                  setIsOpen,
+                  setFeedBackM,
+                  currentEvent,
+                  setEditState,
+                )
               }
             >
               <p>

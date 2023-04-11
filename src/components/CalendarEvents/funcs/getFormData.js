@@ -9,6 +9,7 @@ export const getFormData = (
   d,
   setD,
   setEditState,
+  setFeedBackM,
 ) => {
   const title = document.querySelector('#title')
   const date = document.querySelector('#date')
@@ -22,7 +23,7 @@ export const getFormData = (
   hourEnd.value == null
 
   /* title e date required */
-  if (title.length <= 0 || date.value.length <= 0) {
+  if (title.value.length <= 0 || date.value.length <= 0) {
     setIsOpen(true)
   } else {
     /* conferir se o evento está sendo adicionado no mesmo
@@ -184,6 +185,7 @@ export const getFormData = (
     setD((c) => c + 1)
     setEventTitle(title.value)
     setEventDate(date.value)
+    setFeedBackM('added')
     setIsOpen(false)
     setEditState(false)
   }

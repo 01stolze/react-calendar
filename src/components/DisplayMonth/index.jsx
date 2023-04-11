@@ -6,8 +6,10 @@ import {
   fixPreviouslyDay,
   switchMonth,
 } from './displayMonth'
-import { keyGen } from '../../utils/getDate'
+import { getCurrentDayNumber, keyGen } from '../../utils/getDate'
 import { consoleNumber } from '../CalendarEvents/funcs/consoleNumber'
+import { currentGridDay } from '../../utils/currentGridDay'
+// import { eventsData } from '../CalendarEvents/data'
 
 export const DisplayMonth = ({
   month,
@@ -55,7 +57,10 @@ export const DisplayMonth = ({
                 )
               }
             >
-              <div className="day-number">{c}</div>
+              <div className="day-number" id={c}>
+                {c}
+              </div>
+              {c == getCurrentDayNumber() && currentGridDay(c)}
             </div>
           )
         })}
@@ -78,4 +83,5 @@ DisplayMonth.propTypes = {
   setDayName: P.func,
   setMonthEvent: P.func,
   setYearEvent: P.func,
+  selectedDateOrganized: P.string,
 }

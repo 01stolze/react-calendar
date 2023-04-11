@@ -16,6 +16,7 @@ export const CalendarEvents = ({
   dayName,
   monthEvent,
   yearEvent,
+  setFeedBackM,
 }) => {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [d, setD] = useState(1)
@@ -42,6 +43,7 @@ export const CalendarEvents = ({
             setIsOpen,
             setEditState,
             currentEvent,
+            setFeedBackM,
           )}
         </div>
         <EventsModal
@@ -53,6 +55,7 @@ export const CalendarEvents = ({
           setD={setD}
           editState={editState}
           setEditState={setEditState}
+          setFeedBackM={setFeedBackM}
         />
         <div className="add-event-button">
           <button
@@ -73,4 +76,5 @@ CalendarEvents.propTypes = {
   selectedDay: P.number,
   setSelectedDay: P.func,
   yearEvent: P.number,
+  setFeedBackM: P.func,
 }

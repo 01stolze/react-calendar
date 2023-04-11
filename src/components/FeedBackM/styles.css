@@ -1,0 +1,40 @@
+.feedBackMessage {
+    position: absolute;
+    left: 71.5%;
+    margin-left: -50px;
+    top: 75%;
+}
+
+@media (max-width: 768px) {
+    .feedBackMessage {
+        left: 47%;
+        top: 176%;
+    }
+}
+
+#successfulAdded, #successfulDeleted, #successfulEdited {
+    text-align: center;
+    width: 10rem;
+    padding: 0.4rem 0;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.successfulAdded-getGone {
+    opacity: 0;
+    transition: 3s;
+}
+
+#successfulAdded {
+    background: green;
+}
+
+#successfulDeleted {
+    background: red;
+}
+
+#successfulEdited {
+    background: grey;
+}
