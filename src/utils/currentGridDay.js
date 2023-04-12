@@ -1,11 +1,13 @@
-export const currentGridDay = (c) => {
-  const currentDay = document.getElementsByClassName('day-number')
+import { getMonth } from './getDate'
 
-  const arrayDays = [...currentDay]
-
-  console.log(c)
-
-  console.log(arrayDays)
-
-  console.log(arrayDays[16].innerHTML) // opa kkkkkk
+export const currentGridDay = (c, month) => {
+  if (getMonth() == month) {
+    setTimeout(() => {
+      const currentDay = document
+        .getElementsByClassName('day-number')
+        .namedItem(c)
+        .classList.add('current')
+      console.log(c, currentDay)
+    })
+  }
 }

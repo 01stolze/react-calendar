@@ -6,6 +6,7 @@ export const CalendarGrid = ({
   month,
   year,
   setSelectedDay,
+  selectedDay,
   setDayName,
   setMonthEvent,
   setYearEvent,
@@ -25,6 +26,7 @@ export const CalendarGrid = ({
         month={month}
         year={year}
         setSelectedDay={setSelectedDay}
+        selectedDay={selectedDay}
         setDayName={setDayName}
         setMonthEvent={setMonthEvent}
         setYearEvent={setYearEvent}
@@ -40,4 +42,5 @@ CalendarGrid.propTypes = {
   setDayName: P.func,
   setMonthEvent: P.func,
   setYearEvent: P.func,
+  selectedDay: P.number,
 }

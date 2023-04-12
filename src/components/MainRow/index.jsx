@@ -34,6 +34,7 @@ export const MainRow = () => {
       <div className="main-row">
         <Calendar
           setSelectedDay={setSelectedDay}
+          selectedDay={selectedDay}
           setDayName={setDayName}
           setMonthEvent={setMonthEvent}
           setYearEvent={setYearEvent}

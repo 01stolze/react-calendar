@@ -7,6 +7,7 @@ import P from 'prop-types'
 
 export const Calendar = ({
   setSelectedDay,
+  selectedDay,
   setDayName,
   setMonthEvent,
   setYearEvent,
@@ -27,6 +28,7 @@ export const Calendar = ({
           month={month}
           year={year}
           setSelectedDay={setSelectedDay}
+          selectedDay={selectedDay}
           setDayName={setDayName}
           setMonthEvent={setMonthEvent}
           setYearEvent={setYearEvent}
@@ -41,4 +43,5 @@ Calendar.propTypes = {
   setDayName: P.func,
   setMonthEvent: P.func,
   setYearEvent: P.func,
+  selectedDay: P.number,
 }

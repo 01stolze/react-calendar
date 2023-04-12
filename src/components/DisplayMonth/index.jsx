@@ -9,12 +9,14 @@ import {
 import { getCurrentDayNumber, keyGen } from '../../utils/getDate'
 import { consoleNumber } from '../CalendarEvents/funcs/consoleNumber'
 import { currentGridDay } from '../../utils/currentGridDay'
+import { getGridEvent } from '../../utils/getGridEvent'
 // import { eventsData } from '../CalendarEvents/data'
 
 export const DisplayMonth = ({
   month,
   year,
   setSelectedDay,
+  selectedDay,
   setDayName,
   setMonthEvent,
   setYearEvent,
@@ -25,8 +27,13 @@ export const DisplayMonth = ({
   const current = switchMonth(month, dayNumberData, year)
   const totalArray = [...previously, ...current]
   const next = fixNextDay(month, year, totalArray, dayNumberData)
-
   const checkPreviouslyNeed = firstDayWeekNumber(month, year)
+
+  current.filter((value) => {
+    if (value == getCurrentDayNumber()) {
+      currentGridDay(value, month)
+    }
+  })
 
   return (
     <div className="day-grid">
@@ -49,6 +56,8 @@ export const DisplayMonth = ({
                 consoleNumber(
                   c,
                   setSelectedDay,
+                  selectedDay,
+                  current,
                   setDayName,
                   setMonthEvent,
                   month,
@@ -59,8 +68,8 @@ export const DisplayMonth = ({
             >
               <div className="day-number" id={c}>
                 {c}
+                {getGridEvent(c)}
               </div>
-              {c == getCurrentDayNumber() && currentGridDay(c)}
             </div>
           )
         })}
@@ -80,6 +89,7 @@ DisplayMonth.propTypes = {
   month: P.string.isRequired,
   year: P.number.isRequired,
   setSelectedDay: P.func,
+  selectedDay: P.number,
   setDayName: P.func,
   setMonthEvent: P.func,
   setYearEvent: P.func,

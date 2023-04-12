@@ -40,6 +40,7 @@
     height: 5rem;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
+    overflow: hidden;
 }
 
 .last {
@@ -56,7 +57,17 @@
     display: flex;
 }
 
-.day-number--current {
-    color: red;
+.current {
+    border: 1px solid #ece7d6;
+    height: 4.63rem;
+}
+
+.selected {
+    border: 1px solid rgb(99, 221, 221);
+    height: 4.63rem;
+}
+
+.grid-event p {
+    display: flex;
 }
 
