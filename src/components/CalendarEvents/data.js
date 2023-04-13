@@ -1,7 +1,11 @@
 export const eventsData = [
   {
     nocase: 'sem eventos',
-    date: 'a',
+    date: 'nocase',
+    newDate: 'nocase',
+    new3Date: 'nocase',
+    new4Date: 'nocase',
+    new5Date: 'nocase',
   },
 ]
 

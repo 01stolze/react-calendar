@@ -25,13 +25,10 @@ export const displayEvents = (
 
   /* conferir se o dia tem eventos */
 
-  console.log(eventsData)
-
   let currentEvent = null
 
   const currentEventFunc = () => {
     eventsData.forEach((data) => {
-      console.log(data.date)
       if (
         data.date == selectedDateOrganized ||
         data.newDate == selectedDateOrganized ||

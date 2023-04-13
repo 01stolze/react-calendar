@@ -6,10 +6,11 @@ import {
   fixPreviouslyDay,
   switchMonth,
 } from './displayMonth'
-import { getCurrentDayNumber, keyGen } from '../../utils/getDate'
+import { keyGen } from '../../utils/getDate'
 import { consoleNumber } from '../CalendarEvents/funcs/consoleNumber'
 import { currentGridDay } from '../../utils/currentGridDay'
 import { getGridEvent } from '../../utils/getGridEvent'
+import { useEffect } from 'react'
 // import { eventsData } from '../CalendarEvents/data'
 
 export const DisplayMonth = ({
@@ -29,10 +30,10 @@ export const DisplayMonth = ({
   const next = fixNextDay(month, year, totalArray, dayNumberData)
   const checkPreviouslyNeed = firstDayWeekNumber(month, year)
 
-  current.filter((value) => {
-    if (value == getCurrentDayNumber()) {
-      currentGridDay(value, month)
-    }
+  currentGridDay(month, dayNumberData, year)
+
+  useEffect(() => {
+    getGridEvent(month, current)
   })
 
   return (
@@ -67,8 +68,7 @@ export const DisplayMonth = ({
               }
             >
               <div className="day-number" id={c}>
-                {c}
-                {getGridEvent(c)}
+                <p className="each-day-number">{c}</p>
               </div>
             </div>
           )

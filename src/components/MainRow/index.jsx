@@ -24,7 +24,6 @@ export const MainRow = () => {
         toggleAddId()
       }
     }
-    console.log(feedBackM)
     setTimeout(() => {
       setFeedBackM('')
     }, 1000)
