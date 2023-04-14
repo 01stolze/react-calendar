@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { disabledAdd } from './funcs/disableAdd'
 import { displayEvents } from './funcs/displayEvents'
 import { EventsModal, openModal } from './Modal'
+import { translateMonth } from '../../utils/getDate'
 
 Modal.setAppElement('#root')
 
@@ -31,7 +32,7 @@ export const CalendarEvents = ({
         <div className="events-header">
           <h3>{dayName}</h3>
           <h2>
-            {monthEvent} {selectedDay}
+            {translateMonth(monthEvent)} {selectedDay}
           </h2>
         </div>
         <div className="events-list">

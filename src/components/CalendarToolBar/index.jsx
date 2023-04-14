@@ -1,4 +1,9 @@
-import { getMonth, getYear, handleNextOrMonth } from '../../utils/getDate'
+import {
+  getMonth,
+  getYear,
+  handleNextOrMonth,
+  translateMonth,
+} from '../../utils/getDate'
 import P from 'prop-types'
 import './styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -39,7 +44,7 @@ export const CalendarToolBar = ({ month, setMonth, year, setYear }) => {
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
       <h2>
-        {month} {year}
+        {translateMonth(month)} {year}
       </h2>
       <div className="tool-bar-flex-end">
         <button className="tool-bar-button--today" onClick={defaultDate}>

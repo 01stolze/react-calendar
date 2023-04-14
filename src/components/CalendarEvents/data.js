@@ -1,11 +1,11 @@
 export const eventsData = [
   {
     nocase: 'sem eventos',
-    date: 'nocase',
-    newDate: 'nocase',
-    new3Date: 'nocase',
-    new4Date: 'nocase',
-    new5Date: 'nocase',
+    date: 'nocaseatall',
+    newDate: 'nocaseatall',
+    new3Date: 'nocaseatall',
+    new4Date: 'nocaseatall',
+    new5Date: 'nocaseatall',
   },
 ]
 
@@ -16,5 +16,6 @@ export const editEventsData = [
     description: '',
     hourStart: '',
     hourEnd: '',
+    eventIconColor: '',
   },
 ]
