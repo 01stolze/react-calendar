@@ -60,12 +60,12 @@
     font-weight: 900;
 }
 
-.event-title {
-    background: rgb(39, 124, 124);
-    color: white;
-    padding: 4px;
-    font-size: 10px;
-    border-radius: 5px;
+.event-icon {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 1px;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .selected {

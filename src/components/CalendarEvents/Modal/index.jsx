@@ -51,19 +51,19 @@ export const EventsModal = ({
         <div className="form-container">
           <form id="modal-form">
             <div className="form-row">
-              <label>Title</label>
+              <label>Título</label>
               <span className="required">*</span>
               <input
                 type="text"
                 id="title"
-                placeholder="Event Title"
+                placeholder="Título do evento"
                 maxLength="25"
                 defaultValue={editEventsData[0].title}
                 onChange={handleRequiredForm}
               ></input>
             </div>
             <div className="form-row">
-              <label>Date</label>
+              <label>Data</label>
               <span className="required">*</span>
               <input
                 type="date"
@@ -73,13 +73,13 @@ export const EventsModal = ({
               ></input>
             </div>
             <div className="form-row">
-              <label>Begins:</label>
+              <label>Começa:</label>
               <input
                 type="time"
                 id="begin-time"
                 defaultValue={editEventsData[0].hourStart}
               ></input>
-              <label>Ends:</label>
+              <label>Termina:</label>
               <input
                 type="time"
                 id="end-time"
@@ -87,13 +87,27 @@ export const EventsModal = ({
               ></input>
             </div>
             <div className="form-row">
-              <label>Description:</label>
+              <label>Descrição</label>
               <input
                 type="text"
                 id="description"
-                placeholder="Description"
+                name="description"
+                placeholder="Descrição"
                 maxLength="40"
                 defaultValue={editEventsData[0].description}
+              ></input>
+            </div>
+            <div className="form-row" id="color-form-row">
+              <label className="colorLabel">Cor do ícone</label>
+              <input
+                type="color"
+                name="colorIcon"
+                id="colorBox"
+                defaultValue={
+                  editEventsData[0].iconColor
+                    ? editEventsData[0].iconColor
+                    : '#3395ff'
+                }
               ></input>
             </div>
             {!editState ? (

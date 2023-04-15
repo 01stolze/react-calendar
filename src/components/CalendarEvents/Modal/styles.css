@@ -34,6 +34,11 @@ input:required {
     border: 1px solid red;
 }
 
+input:disabled {
+    opacity: 0.1;
+    filter: grayscale(1);
+}
+
 /* modal footer */ 
 
 .modal-footer {

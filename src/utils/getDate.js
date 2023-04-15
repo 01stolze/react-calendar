@@ -3,7 +3,7 @@ export const translateMonth = (month) => {
     case 'January': {
       return 'Janeiro'
     }
-    case 'Fevereiro': {
+    case 'February': {
       return 'Fevereiro'
     }
     case 'March': {

@@ -16,6 +16,7 @@ export const getFormData = (
   const description = document.querySelector('#description')
   const hourStart = document.querySelector('#begin-time')
   const hourEnd = document.querySelector('#end-time')
+  const iconColor = document.querySelector('#colorBox')
 
   /* valores opcionais  */
   description.value == null
@@ -72,6 +73,7 @@ export const getFormData = (
         data.description = description.value
         data.hourStart = hourStart.value
         data.hourEnd = hourEnd.value
+        data.iconColor = iconColor.value
       } else if (data.newTitle == '') {
         console.log('newTitle foi apagado, adicione ele')
         data.newTitle = title.value
@@ -79,6 +81,7 @@ export const getFormData = (
         data.newDescription = description.value
         data.newHourStart = hourStart.value
         data.newHourEnd = hourEnd.value
+        data.newIconColor = iconColor.value
       } else if (data.new3Title == '') {
         console.log('new3Title foi apagado, adicione ele')
         data.new3Title = title.value
@@ -86,6 +89,7 @@ export const getFormData = (
         data.new3Description = description.value
         data.new3HourStart = hourStart.value
         data.new3HourEnd = hourEnd.value
+        data.new3IconColor = iconColor.value
       } else if (data.new4Title == '') {
         console.log('new4Title foi apagado, adicione ele')
         data.new4Title = title.value
@@ -93,6 +97,7 @@ export const getFormData = (
         data.new4Description = description.value
         data.new4HourStart = hourStart.value
         data.new4HourEnd = hourEnd.value
+        data.new4IconColor = iconColor.value
       } else if (data.new5Title == '') {
         console.log('new5Title foi apagado, adicione ele')
         data.new5Title = title.value
@@ -100,6 +105,7 @@ export const getFormData = (
         data.new5Description = description.value
         data.new5HourStart = hourStart.value
         data.new5HourEnd = hourEnd.value
+        data.new5IconColor = iconColor.value
       }
 
       // se nenhum valor foi apagado, adicione-os pela primeira vez
@@ -116,6 +122,7 @@ export const getFormData = (
         data.description = description.value
         data.hourStart = hourStart.value
         data.hourEnd = hourEnd.value
+        data.iconColor = iconColor.value
       } else if (
         !!data.title &&
         !data.newTitle &&
@@ -129,6 +136,7 @@ export const getFormData = (
         data.newDescription = description.value
         data.newHourStart = hourStart.value
         data.newHourEnd = hourEnd.value
+        data.newIconColor = iconColor.value
       } else if (
         // adicionar new3Title
         !!data.title &&
@@ -143,6 +151,7 @@ export const getFormData = (
         data.new3Description = description.value
         data.new3HourStart = hourStart.value
         data.new3HourEnd = hourEnd.value
+        data.new3IconColor = iconColor.value
       } else if (
         // adicionar o new4Title
         !!data.title &&
@@ -157,6 +166,7 @@ export const getFormData = (
         data.new4Description = description.value
         data.new4HourStart = hourStart.value
         data.new4HourEnd = hourEnd.value
+        data.new4IconColor = iconColor.value
       } else if (
         // adicionar o new5Title
         !!data.title &&
@@ -171,6 +181,7 @@ export const getFormData = (
         data.new5Description = description.value
         data.new5HourStart = hourStart.value
         data.new5HourEnd = hourEnd.value
+        data.new5IconColor = iconColor.value
       }
     } else {
       console.warn('ta safe KAKKK')
@@ -180,6 +191,7 @@ export const getFormData = (
         description: `${description.value}`,
         hourStart: `${hourStart.value}`,
         hourEnd: `${hourEnd.value}`,
+        iconColor: `${iconColor.value}`,
       }
     }
     setD((c) => c + 1)

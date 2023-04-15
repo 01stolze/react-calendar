@@ -28,6 +28,7 @@ export const handleEditEvent = (
           description: e.newDescription,
           hourStart: e.newHourStart,
           hourEnd: e.newHourEnd,
+          iconColor: e.newIconColor,
         }
         break
       }
@@ -38,6 +39,7 @@ export const handleEditEvent = (
           description: e.new3Description,
           hourStart: e.new3HourStart,
           hourEnd: e.new3HourEnd,
+          iconColor: e.new3IconColor,
         }
         break
       }
@@ -48,6 +50,7 @@ export const handleEditEvent = (
           description: e.new4Description,
           hourStart: e.new4HourStart,
           hourEnd: e.new4HourEnd,
+          iconColor: e.new4IconColor,
         }
         break
       }
@@ -58,6 +61,7 @@ export const handleEditEvent = (
           description: e.new5Description,
           hourStart: e.new5HourStart,
           hourEnd: e.new5HourEnd,
+          iconColor: e.new5IconColor,
         }
         break
       }
@@ -71,6 +75,7 @@ export const handleEditEvent = (
     const description = document.querySelector('#description')
     const hourStart = document.querySelector('#begin-time')
     const hourEnd = document.querySelector('#end-time')
+    const iconColor = document.querySelector('#colorBox')
     console.log('REALMENTE EDITAR OS EVENTOS, noufa garai')
     console.log('evento a ser editado:', editEventsData)
 
@@ -83,6 +88,7 @@ export const handleEditEvent = (
           data.description = ''
           data.hourStart = ''
           data.hourEnd = ''
+          data.iconColor = ''
         } else {
           console.log('CHEGOU AQUI')
           data.title = title.value
@@ -90,6 +96,7 @@ export const handleEditEvent = (
           data.description = description.value
           data.hourStart = hourStart.value
           data.hourEnd = hourEnd.value
+          data.iconColor = iconColor.value
         }
       } else if (editEventsData[0].title == data.newTitle) {
         if (wichEvent == 'delete') {
@@ -99,6 +106,7 @@ export const handleEditEvent = (
           data.newDescription = ''
           data.newHourStart = ''
           data.newHourEnd = ''
+          data.newIconColor = ''
         } else {
           console.log('CHEGOU AQUI')
           data.newTitle = title.value
@@ -106,6 +114,7 @@ export const handleEditEvent = (
           data.newDescription = description.value
           data.newHourStart = hourStart.value
           data.newHourEnd = hourEnd.value
+          data.newIconColor = iconColor.value
         }
       } else if (editEventsData[0].title == data.new3Title) {
         if (wichEvent == 'delete') {
@@ -115,6 +124,7 @@ export const handleEditEvent = (
           data.new3Description = ''
           data.new3HourStart = ''
           data.new3HourEnd = ''
+          data.new3IconColor = ''
         } else {
           console.log('CHEGOU AQUI')
           data.new3Title = title.value
@@ -122,6 +132,7 @@ export const handleEditEvent = (
           data.new3Description = description.value
           data.new3HourStart = hourStart.value
           data.new3HourEnd = hourEnd.value
+          data.new3IconColor = iconColor.value
         }
       } else if (editEventsData[0].title == data.new4Title) {
         if (wichEvent == 'delete') {
@@ -130,14 +141,14 @@ export const handleEditEvent = (
           data.new4Date = ''
           data.new4Description = ''
           data.new4HourStart = ''
-          data.new4HourEnd = ''
+          data.new4IconColor = ''
         } else {
           console.log('CHEGOU AQUI')
           data.new4Title = title.value
           data.new4Date = date.value
           data.new4Description = description.value
           data.new4HourStart = hourStart.value
-          data.new4HourEnd = hourEnd.value
+          data.new4IconColor = iconColor.value
         }
       } else if (editEventsData[0].title == data.new5Title) {
         if (wichEvent == 'delete') {
@@ -147,6 +158,7 @@ export const handleEditEvent = (
           data.new5Description = ''
           data.new5HourStart = ''
           data.new5HourEnd = ''
+          data.new5IconColor = ''
         } else {
           console.log('CHEGOU AQUI')
           data.new5Title = title.value
@@ -154,6 +166,7 @@ export const handleEditEvent = (
           data.new5Description = description.value
           data.new5HourStart = hourStart.value
           data.new5HourEnd = hourEnd.value
+          data.new5IconColor = iconColor.value
         }
       }
     })
